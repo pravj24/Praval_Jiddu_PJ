@@ -104,6 +104,7 @@ NOTE: Your Program should retain its memory of whatever data has been fed by the
 
 - Do **not** use GPT or other AI tools as we might very well ask you to explain your code as well as your thought process.
 - Use your **own logic** and write clean, structured code.
+- If you think you can make the program with alternative methods like MongoDB or SQL then you are free to do so.(But then your code should still run inside docker satisfying all the requirements)
 - Feel free to get **creative** with features, but stick to the core requirements.
 - Hint: For storage think of each object as a file.
 ---
