@@ -27,6 +27,7 @@ You got your dream job in **MAANG**. To give other employees a run for their mon
 
 Create a Netflix-style inventory management system using Object-Oriented Programming (OOPS). The system should manage a collection of movies, TV shows, and users, allowing them to browse, rent, and return content.
 NOTE: Your Program should retain its memory of whatever data has been fed by the user
+
 ---
 
 #### Login and Account Creation
