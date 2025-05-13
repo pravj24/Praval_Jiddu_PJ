@@ -1,17 +1,19 @@
-# Use Ubuntu 22.04 as the base image
-FROM ubuntu:22.04
+FROM gcc:11
 
-# Update the package list and install g++
-RUN apt-get update && apt-get install -y g++
+RUN apt-get update && apt-get install -y \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory in the container
+#Set working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+#Copy all files to the container
+COPY . /app/
 
-# Compile the C++ code
-RUN g++ -o main main.cpp
+RUN mkdir -p /app/users
 
-# Set the command to run the executable
-CMD ["./main"]
+#Compile the C++ code
+RUN g++ -o Task2Praval_J_app Task2Praval_J.cpp -lcrypto -std=c++17 -lstdc++fs
+
+#Run the compiled code
+CMD ["./Task2Praval_J_app"]
