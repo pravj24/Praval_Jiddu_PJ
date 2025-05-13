@@ -59,11 +59,10 @@ public:
 class Rental {
 public:
     Content* content;
-    int season; // 0 if not applicable for movies
+    int season; // 0 if not applicable like for movies
     std::string rent_date;
     std::string due_date;
 //Hardcoded dates for simplicity
-    // In a real-world application, you would use a date library to handle this
     Rental(Content* c, int s = 0) : content(c), season(s), rent_date("2023-10-01"), due_date("2023-10-08") { 
         c->is_rented = true;
     }
@@ -75,7 +74,7 @@ public:
 class Purchase {
 public:
     Content* content;
-    int season; // 0 if not applicable for movies
+    int season; // 0 if not applicable like for movies
     Purchase(Content* c, int s = 0) : content(c), season(s) {}
     std::string toString() const {
         return content->title + "|" + std::to_string(season);
